@@ -1,6 +1,24 @@
 import React from 'react';
 import './App.css';
 
+export type TaskType = {
+  id: string
+  title: string
+  isDone: boolean
+}
+
+export type FilterType = 'active' | 'inactive' | 'all'
+
+export type TodoListType = {
+  id: string
+  title: string
+  filter: FilterType
+}
+
+export type TasksForTodolistType = {
+  [id: string]: Array<TaskType>
+}
+
 function App() {
   return (
       <div className="App">
